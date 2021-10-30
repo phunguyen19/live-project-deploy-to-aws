@@ -10,6 +10,11 @@ variable "aws_secret_key" {
   sensitive   = true
 }
 
+variable "region" {
+  description = "Region for AWS"
+  default     = "us-west-2"
+}
+
 
 variable "prefix" {
   description = "Prefix for all names"
@@ -21,6 +26,8 @@ variable "vpc_cidr" {
   type        = string
   default     = "10.0.0.0/16"
 }
+
+
 
 variable "vpc_azs" {
   description = "Availability zones for VPC"
